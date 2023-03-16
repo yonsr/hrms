@@ -3,22 +3,18 @@ define('TITLE',"HRMS Login");
 include '../assets/layouts/navbar.php';
 check_logged_out();
 ?>
-
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-
         </div>
         <div class="col-sm-4">
             <!-- <form class="form-auth" action="../api/login/" method="post"> -->
             <form class="form-auth" action="login.inc.php" method="post">
-
                 <?php insert_csrf_token(); ?>
 
                 <div class="text-center">
                     <img class="mb-1" src="../assets/images/logo.png" alt="" width="130" height="130">
                 </div>
-
                 <h6 class="h3 mb-5 font-weight-normal text-muted text-center">Login to your Account</h6>
 
                 <div class="text-center mb-3">
@@ -26,7 +22,6 @@ check_logged_out();
                         <?php
                             if (isset($_SESSION['STATUS']['loginstatus']))
                                 echo $_SESSION['STATUS']['loginstatus'];
-
                         ?>
                     </small>
                 </div>
